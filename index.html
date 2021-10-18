@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save WildLife</title>
+    <link rel="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+  <nav class="navbar">
+    <div class="content">
+      <div class="logo"><a href="#">Sparks Foundation</a></div>
+      <ul class="menu-list">
+        <div class="icon cancel-btn">
+          <i class="fas fa-times"></i>
+        </div>
+        <li><a href="#">Home</a></li>
+        <li><a href="#as">About-Us</a></li>
+        
+      </ul>
+      <div class="icon menu-btn">
+        <i class="fas fa-bars"></i>
+      </div>
+    </div>
+  </nav>
+
+  <div class="banner">
+      <h1>Protect WildLife <br>Donate Now</h1>
+  </div>
+ 
+
+<div class="banner1">
+  <div class="about">
+    <div class="content">
+    <div id="as" class="title">About-Us</div>
+      <p><b>Help us Protect Wildlife. Our mission is to conserve nature and reduce the most pressing threats to the diversity of life on Earth. It is our urgent duty to protect the natural splendor of ecosystems and to evolve a system of co-existence with every living creature upon the earth.
+      </b></p>
+      <div class="btn">
+        
+        <a> Click Below to Donate ↓</a> 
+    </div>
+    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_IAWLELD9VeFTco" async> </script> </form>
+    </div>
+    </div>
+  </div>
+
+<!-------- footer -------->
+
+<div class="footer">
+    <div class="container1">
+    <div class="row">
+    
+    <div class="footer-col-2">
+        <a href="#"><img src="img/wl.png"></a>
+    <p><b>Our purpose is to Save Wild Life Animals</b></P>
+    </div>
+   
+    
+    </div>
+    <hr>
+    <p class="copyright"><b>&copy 2021. Made by Nishant Acharekar
+    <br> The Sparks Foundation </b></p>
+    </div>
+    </div>
+
+  <script>
+    const body = document.querySelector("body");
+    const navbar = document.querySelector(".navbar");
+    const menu = document.querySelector(".menu-list");
+    const menuBtn = document.querySelector(".menu-btn");
+    const cancelBtn = document.querySelector(".cancel-btn");
+    menuBtn.onclick = ()=>{
+      menu.classList.add("active");
+      menuBtn.classList.add("hide");
+      cancelBtn.classList.add("show");
+      body.classList.add("disabledScroll");
+    }
+    cancelBtn.onclick = ()=>{
+      menu.classList.remove("active");
+      menuBtn.classList.remove("hide");
+      cancelBtn.classList.remove("show");
+      body.classList.remove("disabledScroll");
+    }
+
+    window.onscroll = ()=>{
+      this.scrollY > 20 ? navbar.classList.add("sticky") : navbar.classList.remove("sticky");
+    }
+  </script>
+
+</body>
+</html>
